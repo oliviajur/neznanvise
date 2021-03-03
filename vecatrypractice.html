@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content= "width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Projectss bitchess</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <h2 style="position: absolute">Here is your MixTape</h2>
+        <script src="three.js"> </script>
+        <script src="java/obj.js"> </script>
+        <script src="java/mtl.js"> </script>
+        <script src = "OrbitControls.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script> <!--green sock animaation plugin-->
+
+
+        <script>
+            //SCENE
+            var scene = new THREE.Scene();
+
+            //CAMERA
+            var camera = new THREE.PerspectiveCamera (45, window.innerWidth/window.innerHeight, 1, 3000); 
+            camera.position.z = 25; 
+            camera.position.x = 400;
+            camera.position.y = 100;
+
+            var renderer = new THREE.WebGLRenderer ({anitalias: true, alpha: true});
+            renderer.setClearColor("#e8e8e8");
+            renderer.setSize (window.innerWidth, window.innerHeight);
+
+            document.body.appendChild (renderer.domElement);
+            
+            window.addEventListener ("resize", () =>{
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                camera.aspect =  window.innerWidth/window.innerHeight;
+                camera.updateProjectionMatrix();
+            })
+            
+            //RAYCASTER - too define position of mouse
+            //var  raycaster = new THREE.Raycaster();
+            //var mouse = new THREE.Vector2();
+
+            //LIGHT
+            var light2 = new THREE.AmbientLight (0xffffff, 0.9); //flood entire scene with light
+            scene.add(light2)
+
+            var light = new THREE.PointLight (0xFFFFFF, 0.7, 1000); //color, intensity,distance
+            scene.add(light);
+
+            
+            //CONTROLS
+            controls = new THREE.OrbitControls (camera, renderer.domElement)
+            controls.target.set( 0, 1, 0 );
+			controls.update();
+            controls.enableDamping = true;
+            controls.enableZoom = true;
+            controls.minDistance = 0;
+
+
+
+            //CASSETTE
+            var mojobj;
+
+                var mtlLoader = new THREE.MTLLoader();
+                mtlLoader.load ('cassettetape2/cassettetape2.mtl', function(materials){
+
+
+                materials.preload();
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.load('cassettetape2/cassettetape2.obj', function(object){
+                    scene.add(object);
+                        mojobj = object;
+                        //object.position.z = -200;
+                        object.position.x = -400;
+                        object.position.y = -200;
+                        object.rotation.y = 100;
+                        //object.rotation.set (250,0,0)
+
+                        this.tl = new TimelineMax().delay(.5);
+                        //this.tl.from(mojobj.position, 1, {x:0, ease: Expo.easeOut}) //this is to animate it
+                        //this.tl.from(mojobj.rotation, 2, {y: Math.PI*0.7, ease: Expo.easeOut})
+                    });
+                })
+
+
+            var render = function(){
+                requestAnimationFrame(render);
+                //mojobj.rotation.x += 0.01;
+                //mojobj.rotation.y += 0.01;
+                controls.update();
+
+                renderer.render(scene, camera);
+            }
+
+            render();
+        </script>
+    </body>
+</html>
+
+<!-- this is the mixtape that moves when you mouse over it -->

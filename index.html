@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mixtape</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+
+        <!-- <nav>  -->
+            <!-- <a href="#create" id="cr">create</a> -->
+            <!-- <a href="#discover" id="di">discover</a>  -->
+        <!-- </nav>  -->
+
+        <section>
+            <ul>
+                <li class="scroll" data-rate="-1.1">The</li>
+                <li style="color:#f05454"; class="scroll" data-rate="-1.3">Mix</li>
+                <li style="color:#f05454"; class="scroll" data-rate="-0.9" >Tape</li>
+                <li class="scroll" data-rate="-1.6">Collective</li>
+            </ul>
+        </section>  
+
+        <section>
+            <h4 class="scroll" data-rate="-1.2" >About</h4>
+            <pre class="scroll" data-rate="-1.1">
+                The Mixtape Collective is a collaborative website that brings individuals together through 
+                a mutual appreciation of music. 
+                
+                Users contribute by submitting a mixtape, that expresses their personal tastes, usually crafted 
+                around a certain mood,theme or idea. The Mixtape is then added to the Library where it 
+                becomes accessible for other users. 
+
+                The MixTape Collective reconfigures the way we discover music. It does so by reimagining the 
+                process of creating and receiving mixtapes on a digital platform. What makes a mixtape better 
+                then sharing a playlist is that the person who made it had to hand write the song titles and 
+                artists or make their own artwork. It’s personal. It’s genuine. Unlike vinyl records, cassette 
+                tapes absolutely do not sound better then digital. They sound tiny and have a low hiss in the 
+                background and will start to warble if you listen to the same tape over and over too many 
+                times. Mixtapes fit into that beautiful in-between for price and art. They give users the ability to
+                craft a fully realized piece of art.
+
+                We are now living in an era where streamed digital music has taken over. It has freed us from 
+                the inconvenience of the physical medium. But in many ways, the algorithms that 
+                streaming platforms use have started to take over the act of music discovery. Between Spotify, 
+                YouTube and Apple Music, it’s possible to not only find virtually any song, but be fed the 
+                “perfect” song for your tastes and mood.
+
+                What’s The Point podcast ep. “Are Algorithms Ruining How We Discover Music?”, has Ben 
+                Ratcliff discussing his new book “Every Song Ever”, where he explains his thoughts
+                on streaming platforms.  
+
+                <i>  “I do feel pessimistic about the whole project. I do feel that if the great push 
+                    of the smartest minds in this business is moving towards efficiency in curating for you, in 
+                    delivering you what it knows you will like from the great abundance, well, 
+                    something’s being lost, isn’t it? Isn’t the thing that’s being lost you and your efforts
+                    to figure out what you like and you respond to?”</i>
+
+                Listening to music as a creative act.
+                
+                <i>  “Listening to music is a really creative act. It’s not just passive. Listening to music is
+                    one of the things that helps you discover your humanity. Through listening to music you
+                    learn how to walk and talk and move and have relationships and speak different languages. You pick
+                    up things from music that really increase your humanity. Music is mysterious. And I don’t 
+                    want robots completely in control of my sense of discovery.”</i>
+
+                By participating in this collective, users are encouraged to be creative. Listening to music is a 
+                creative act, and as such, makes the process of creating a mixtape a form of self-reflection. 
+                Self-reflection and discovery come together to create a wholesome experience, that brings us 
+                together – during a time when we feel most separated.
+
+
+                articles refrerenced: <a href="https://www.imore.com/cassette-tapes-are-more-fun-listen-digital-music" target="_blank" rel="noopener noreferrer">mixtape nostalgia</a>, <a href="https://fivethirtyeight.com/features/are-algorithms-ruining-how-we-discover-music/" target="_blank" rel="noopener noreferrer">podcast article</a>
+                further reading: summary of bias in algorithmic decision-making <a href="https://openinnovation.blog.gov.uk/2019/08/12/algorithms-the-good-the-bad-and-the-biased/#:~:text=However%2C%20there%20is%20a%20growing,low%20income%20with%20higher%20crime" target="_blank" rel="noopener noreferrer">research</a>
+            </pre>
+        </section>
+        <section></section> 
+        <section>
+            <h4 class="scroll" data-rate="-1.2" class="underline">Create</h4>
+             <pre class="scroll" data-rate="-1.1">
+                To create a MixTape simply select and add 5 songs
+                into the collaborative Google doc <a href="https://docs.google.com/document/d/1-1M5Fq70rKU62MM41IskX1hD1JpJyeejtxO8HRXaujw/edit?usp=sharing">here</a>.
+
+                Your MixTape can be based on a certain mood or theme, 
+                or it can be a random selection of your favourite tracks. 
+
+                If you would like to stay anonymous while editing this
+                document, open it in "incognito" mode in your browser.
+             </pre>  
+        </section> 
+        <section>  
+             <h4 class="scroll" data-rate="-1.5" class="underline">Discover</h4>
+             <pre class="scroll" data-rate="-1.4">
+                Click <a href="shelf.html">here</a> to go to the MixTape Library.
+                Select any MixTape and discover new music.
+             </pre>  
+        </section>
+
+
+        <script src="index.js"></script>
+
+
+
+        <script>
+            window.addEventListener("scroll", function(e){
+                const target = document.querySelectorAll(".scroll") //the dot means we are looking for class
+                //target.style.background = "#ffcc00";
+                var scrolled = window.pageYOffset;
+
+                var index = 0,length = target.length; //the length is the amount of classes to go through
+                for (index; index < length; index++){
+                    var pos = window.pageYOffset * target[index].dataset.rate;
+
+                    target[index].style.transform = "translate3d(0px, "+pos+"px, 0px)";
+                }
+            })
+
+            //#f0a500"
+        </script>
+    </body>
+</html>

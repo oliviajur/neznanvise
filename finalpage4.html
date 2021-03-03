@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content= "width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Projectss bitchess</title>
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+            body{
+                cursor:grab;
+            }
+            a{
+                text-decoration:none;
+                color:white;    
+            }
+            a:hover{
+                color: #b23850;
+                font-size: 30px ;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2 style="position: absolute; color: #c4dbf6">Pick-me Girl Galore</h2>
+        <h3 style="position: absolute; color:#c4dbf6">tribute to edgy wannabes</h3>
+        <p style="position: absolute"></p>
+        <ol style="position: absolute">
+            <li><a href="https://www.youtube.com/watch?v=RXawa90YU2s" target="_blank" rel="noopener noreferrer">Martha My Dear</a></li>
+            <li><a href="https://www.youtube.com/watch?v=YR5ApYxkU-U" target="_blank" rel="noopener noreferrer">Another Brick in the Wall pt.2</a></li>
+            <li><a href="https://www.youtube.com/watch?v=EqPtz5qN7HM" target="_blank" rel="noopener noreferrer">Hotel California</a></li>
+            <li><a href="https://www.youtube.com/watch?v=TnlPtaPxXfc" target="_blank" rel="noopener noreferrer">That's Life</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Y4HVJvTGbkc" target="_blank" rel="noopener noreferrer">Feed the Machine</a></li>
+        </ol>
+        <script src="three.js"> </script>
+        <script src="java/obj.js"> </script>
+        <script src="java/mtl.js"> </script>
+        <script src = "OrbitControls.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script> <!--green sock animaation plugin-->
+
+        <script>
+
+            function drawText(){
+                document.querySelector ("p").textContent += "song 1   song 2  song 3  song 4  song 5";
+            }
+        //window.setTimeout (drawText, 3000);
+
+        </script>
+        <script>
+            //SCENE
+            var scene = new THREE.Scene();
+
+            //CAMERA
+            var camera = new THREE.PerspectiveCamera (45, window.innerWidth/window.innerHeight, 1, 3000); 
+            //camera.position.z = 200; 
+            camera.position.x = 400;
+            camera.position.y = 100;
+
+            var renderer = new THREE.WebGLRenderer ({anitalias: true, alpha: true});
+            renderer.setClearColor("#3b8beb");
+            renderer.setSize (window.innerWidth, window.innerHeight);
+
+            document.body.appendChild (renderer.domElement);
+            
+            window.addEventListener ("resize", () =>{
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                camera.aspect =  window.innerWidth/window.innerHeight;
+                camera.updateProjectionMatrix();
+            })
+            
+            //RAYCASTER - too define position of mouse
+            //var  raycaster = new THREE.Raycaster();
+            //var mouse = new THREE.Vector2();
+
+            //LIGHT
+            var light2 = new THREE.AmbientLight (0xffffff, 0.9); //flood entire scene with light
+            scene.add(light2)
+
+            var light = new THREE.PointLight (0xFFFFFF, 0.7, 1000); //color, intensity,distance
+            scene.add(light);
+
+            
+            //CONTROLS
+            controls = new THREE.OrbitControls (camera, renderer.domElement)
+            controls.target.set( 0, 1, 0 );
+			controls.update();
+            controls.enableDamping = true;
+            controls.enableZoom = true;
+            controls.minDistance = 0;
+
+
+
+            //CASSETTE
+            var mojobj;
+
+                var mtlLoader = new THREE.MTLLoader();
+                mtlLoader.load ('cassettetape5/cassettetape5.mtl', function(materials){
+
+
+                materials.preload();
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.load('cassettetape5/cassettetape5.obj', function(object){
+                    scene.add(object);
+                        mojobj = object;
+                        object.position.x = -500;
+                        object.position.y = -200;
+
+                        this.tl = new TimelineMax();
+                        //this.tl.from(mojobj.position, 2, {x:1000, ease: Expo.easeOut}) //this is to animate it
+                        this.tl.from(mojobj.scale, 5, {x:30, y:30, ease: Expo.easeOut})
+                    });
+                })
+
+
+            var render = function(){
+                requestAnimationFrame(render);
+                mojobj.rotation.x += 0.01;
+                mojobj.rotation.y += 0.03;
+                controls.update();
+
+                renderer.render(scene, camera);
+            }
+
+            render();
+        </script>
+    </body>
+</html>
+
+<!-- this is the mixtape that moves when you mouse over it -->
