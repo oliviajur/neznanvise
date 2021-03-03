@@ -1,0 +1,38 @@
+newmtl 3D Text material_4ffa8bb6-53bc-4307-89a3-301ad265e9f4
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl 3D Text material 3_af5a9380-c63d-4481-b81e-bad09edfec3a
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl 3D Text material 2_f16d5af5-bb80-420c-8976-e0839a0f1e93
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl 3D Text material 1_db4e2e01-3d41-492a-8b4b-0d4b0a7f2ed7
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl White Paper 1_7af30d97-8ecc-4ec3-9c4d-83f7c0afa2f1
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_17.jpg
+newmtl White Paper_1b4ac24f-5ace-46b1-9bd5-1a6e3f449a80
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_17.jpg
+newmtl Matte Iron 1_cbfe5b3e-e239-4b9a-acac-d106e4f699e5
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Matte Iron_54841324-2419-4b40-af0d-240c115dc75d
+Kd 0.004 0.004 0.004
+d 1.000
+newmtl Matte Iron 2_ee856504-07ed-47bd-bec9-cee3976210a0
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Matte Iron 3_9aaf4649-d60d-4c7f-98ad-c2694d8283d3
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Zig Zag Shapes Gray Dot_776ac8cd-2457-4d8b-981d-e0dbace1d52d
+Kd 0.000 0.000 0.000
+d 1.000

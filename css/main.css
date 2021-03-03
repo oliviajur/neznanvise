@@ -1,0 +1,115 @@
+body { 
+    margin: 0; 
+    height: 100vh;
+    margin: 0;
+    height: 100vh;
+    font-size: 3em;
+    font-family: 'Gill Sans';
+    font-weight: bold;
+    color:black;
+}
+  
+h2{
+    margin-top: 2%;
+    margin-left: 23%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row;
+    position:absolute;
+    font-size: 0.55em;
+    margin-top:27%;
+    margin-left: 20%;
+    text-decoration: none;
+    color:#f05454;
+}
+
+#one {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+}
+
+#two {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+    padding-left: 550%;
+}
+
+#three {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+    padding-left: 550%;
+}
+.container2 {
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row;
+    position:absolute;
+    font-size: 0.55em;
+    margin-top:47%;
+    margin-left: 20%;
+    text-decoration: none;
+    color:#f05454;
+}
+
+#four {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+}
+
+#five {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+    padding-left: 550%;
+
+}
+
+#six {
+    color:#f05454;
+    text-decoration: none;
+    padding: 150%;
+    padding-right: 150%;
+    padding-bottom: 150%;
+    padding-left: 550%;
+}
+
+canvas { 
+    display: block;
+}
+
+/* a:hover { */
+    /* cursor: grab; */
+/* } */
+
+ol{
+    /* color:#f05454; */
+    color: white;
+    margin-left: 70%;
+    margin-top: 25%;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 50%;
+    margin-left: 23%;
+    text-align: center;
+
+}

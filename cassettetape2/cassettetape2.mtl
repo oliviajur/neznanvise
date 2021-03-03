@@ -1,0 +1,38 @@
+newmtl 3D Text material 3_7c8dea79-c325-4aab-9a68-f322ff947b54
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl 3D Text material 2_935979aa-866e-4ecd-8abf-6358b1d53d4b
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl 3D Text material 1_fd1221c7-4da8-4ed0-a143-2d4784494fd7
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl White Paper 1_3b02150d-fb6c-4aed-bd00-25c843eb3d27
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_17.jpg
+newmtl White Paper_92bdb47b-ce39-41b9-ba2a-a65916ffb181
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_17.jpg
+newmtl Matte Iron 1_c614a578-8d18-431a-bb82-3b83765512c8
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Matte Iron_2d4b008b-0af4-489c-8e7c-39cb76f7a512
+Kd 0.004 0.004 0.004
+d 1.000
+newmtl Matte Iron 2_4dff2079-0976-4c02-9289-91d73283f524
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Matte Iron 3_4dab4615-65d7-42fa-900d-082caebe907b
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd texture_30.jpg
+newmtl Subsurface Textured_9f2c9738-5742-43c5-a53a-b7c444684a75
+Kd 0.412 0.412 0.412
+d 1.000
+newmtl 3D Text material_27010a0d-2f63-4ff2-934a-868ee8530ed2
+Kd 0.000 0.000 0.000
+d 1.000
